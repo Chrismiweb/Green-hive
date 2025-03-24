@@ -48,20 +48,17 @@
             </nav>
           
             <!-- Mobile Menu (hidden by default) -->
-            <div id="mobile-menu" class="md:hidden py-[50px] justify-center items-center w-[100%] flex flex-col gap-[20px] mt-4">
-              <a href="home.html">
-                <p class="text-[20px] font-semibold hover:text-yellow-600">Home</p>
-              </a>
-              <a href="resources.html">
-                <p class="text-[20px] font-semibold hover:text-yellow-600">Resources</p>
-              </a>
-              <a href="about.html">
-                <button class="w-full text-[20px] hover:text-white hover:bg-yellow-600 text-black font-semibold px-[25px] py-[10px] bg-yellow-500 rounded-full">
-                  ABOUT US
-                </button>
-              </a>
-            </div>
-          </div>
+            <div id="mobile-menu" class="hidden md:hidden py-[50px] justify-center items-center w-full flex-col gap-[20px]">
+                <div class="w-[100%] gap-[20px] flex flex-col justify-center items-center">
+                    <a href="home.html" class="text-center w-full text-white text-[20px] font-semibold hover:text-yellow-600">Home</a>
+                    <a href="resources.html" class="text-center w-full text-white text-[20px] font-semibold hover:text-yellow-600">Resources</a>
+                  <a href="about.html" class="w-full flex justify-center">
+                    <button class="text-[15px] mt-2 hover:text-white hover:bg-yellow-600 text-black font-semibold px-[25px] py-[10px] bg-yellow-500 rounded-[20px]">
+                      ABOUT US
+                    </button>
+                  </a>
+                </div>
+              </div>
 
 
           <!-- this section is the about us header code  -->
@@ -69,7 +66,7 @@
             <div  class="relative w-full h-[400px] overflow-hidden">
                     <!-- <Image src={aboutus} alt=""  class="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2"/> */} -->
                 <video autoPlay loop muted playsInline  class="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2">
-                <source src="/pages/images/nature.jpg" type="video/mp4" />
+                <source src="/pages/images/nature.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
                 <div  class="absolute inset-0 bg-black opacity-70 z-0"></div>
@@ -241,5 +238,15 @@
     toggleBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
+  
+    // Hide mobile menu when a link is clicked
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+  
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
   </script>
+  
 </html>

@@ -11,9 +11,9 @@
 <body>
     <div class="w-[100%] flex flex-col ">
        <!-- HEADER SECTION -->
-<div class="headerbg flex flex-col px-6 md:px-[90px] text-white bg-black w-full">
+<div class="headerbg flex flex-col text-white px-6 md:px-[90px] w-full">
     <!-- NAVBAR -->
-    <nav class="w-full py-5 flex justify-between items-center relative">
+    <nav class=" w-full  py-5 flex justify-between items-center relative">
       <!-- Logo -->
       <div>
         <p class="text-green-500 font-bold text-[22px] md:text-[25px]">Green Hive</p>
@@ -45,18 +45,21 @@
     </nav>
   
     <!-- MOBILE MENU -->
-    <div id="mobile-menu" class="hidden flex-col gap-4 bg-black px-4 pb-4 md:hidden">
-      <a href="home.html" class="text-white text-[17px] font-semibold hover:text-yellow-600">Home</a>
-      <a href="resources.html" class="text-white text-[17px] font-semibold hover:text-yellow-600">Resources</a>
-      <a href="about.html">
-        <button class="w-full text-[15px] mt-2 hover:text-white hover:bg-yellow-600 text-black font-semibold px-[25px] py-[10px] bg-yellow-500 rounded-[20px]">
-          ABOUT US
-        </button>
-      </a>
+    <div id="mobile-menu" class="hidden md:hidden py-[50px] justify-center items-center w-full flex-col gap-[20px]">
+      <div class="w-[100%] gap-[20px] flex flex-col justify-center items-center">
+          <a href="home.html" class="text-center w-full text-white text-[20px] font-semibold hover:text-yellow-600">Home</a>
+          <a href="resources.html" class="text-center w-full text-white text-[20px] font-semibold hover:text-yellow-600">Resources</a>
+        <a href="about.html" class="w-full flex justify-center">
+          <button class="text-[15px] mt-2 hover:text-white hover:bg-yellow-600 text-black font-semibold px-[25px] py-[10px] bg-yellow-500 rounded-[20px]">
+            ABOUT US
+          </button>
+        </a>
+      </div>
     </div>
+    
   
     <!-- HEADER TEXT SECTION -->
-    <div class="w-full py-[80px] flex flex-col gap-4 md:gap-[10px]">
+    <div class=" w-full py-[80px] flex flex-col gap-4 md:gap-[10px]">
       <h1 class="text-[35px] md:text-[60px] font-bold leading-tight">Welcome to Green Hive</h1>
       <p class="text-[20px] md:text-[25px] font-semibold">Where Sustainability Meets Community</p>
       <p class="w-full md:w-[60%] mt-4 md:mt-[30px] text-[14px] md:text-[16px] font-semibold leading-relaxed">
@@ -184,13 +187,23 @@
     
 </body>
 <script>
-    // Toggle Mobile Menu
-    const toggleBtn = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-  
-    toggleBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+  // Toggle Mobile Menu
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Hide mobile menu when a link is clicked
+  const mobileLinks = mobileMenu.querySelectorAll('a');
+
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
     });
-  </script>
+  });
+</script>
+
 </html>
 

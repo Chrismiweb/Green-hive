@@ -49,20 +49,17 @@
             </nav>
           
             <!-- Mobile Menu (hidden by default) -->
-            <div id="mobile-menu" class="md:hidden py-[50px] justify-center items-center w-[100%] flex flex-col gap-[20px] mt-4">
-              <a href="home.html">
-                <p class="text-[20px] font-semibold hover:text-yellow-600">Home</p>
-              </a>
-              <a href="resources.html">
-                <p class="text-[20px] font-semibold hover:text-yellow-600">Resources</p>
-              </a>
-              <a href="about.html">
-                <button class="w-full text-[20px] hover:text-white hover:bg-yellow-600 text-black font-semibold px-[25px] py-[10px] bg-yellow-500 rounded-full">
-                  ABOUT US
-                </button>
-              </a>
+            <div id="mobile-menu" class="hidden md:hidden py-[50px] justify-center items-center w-full flex-col gap-[20px]">
+              <div class="w-[100%] gap-[20px] flex flex-col justify-center items-center">
+                  <a href="home.html" class="text-center w-full text-white text-[20px] font-semibold hover:text-yellow-600">Home</a>
+                  <a href="resources.html" class="text-center w-full text-white text-[20px] font-semibold hover:text-yellow-600">Resources</a>
+                <a href="about.html" class="w-full flex justify-center">
+                  <button class="text-[15px] mt-2 hover:text-white hover:bg-yellow-600 text-black font-semibold px-[25px] py-[10px] bg-yellow-500 rounded-[20px]">
+                    ABOUT US
+                  </button>
+                </a>
+              </div>
             </div>
-          </div>
 
         <!-- this section is the about us header code  -->
         <div  class="w-[100%]">
@@ -171,20 +168,23 @@
     </div>
 </body>
 <script>
-    const toggleBtn = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuLinks = mobileMenu.querySelectorAll('a, button');
-  
-    toggleBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+  // Toggle Mobile Menu
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Hide mobile menu when a link is clicked
+  const mobileLinks = mobileMenu.querySelectorAll('a');
+
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
     });
-  
-    // Close the menu when a link/button inside it is clicked
-    menuLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
-  </script>
+  });
+</script>
+
   
 </html>
