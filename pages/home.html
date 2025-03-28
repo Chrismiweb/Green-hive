@@ -5,39 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
     <title>Document</title>
+    
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="w-[100%] flex flex-col ">
        <!-- HEADER SECTION -->
-<div class="headerbg flex flex-col text-white px-6 md:px-[90px] w-full">
+<div class="headerbg">
     <!-- NAVBAR -->
-    <nav class=" w-full  py-5 flex justify-between items-center relative">
+    <nav class=" navbar ">
       <!-- Logo -->
       <div>
-        <p class="text-green-500 font-bold text-[22px] md:text-[25px]">Green Hive</p>
+        <p class="nav-logo">Green Hive</p>
       </div>
   
       <!-- Desktop Links -->
-      <div class="hidden md:flex gap-[40px] justify-center items-center">
-        <a href="home.html" class="text-[17px] font-semibold transition-all ease-in-out duration-500 hover:text-yellow-600">Home</a>
-        <a href="resources.html" class="text-[17px] font-semibold transition-all ease-in-out duration-500 hover:text-yellow-600">Resources</a>
+      <div class="desktop-pages">
+        <a href="home.html" class="pages-text">Home</a>
+        <a href="resources.html" class="pages-text">Resources</a>
       </div>
   
       <!-- Desktop Button -->
-      <div class="hidden md:block">
+      <div class="nav-btn-container">
         <a href="about.html">
-          <button class="text-[15px] transition-all ease-in-out duration-500 hover:text-white hover:bg-yellow-600 cursor-pointer text-black font-semibold px-[25px] py-[10px] bg-yellow-500 rounded-[20px]">
+          <button class="nav-btn">
             ABOUT US
           </button>
         </a>
       </div>
   
       <!-- Hamburger (Mobile Only) -->
-      <div class="md:hidden">
+      <div class="nav-icon-mobile">
         <button id="menu-toggle" class="focus:outline-none">
-          <svg class="w-6 h-6 fill-current text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <!-- Hamburger icon -->
+          <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
           </svg>
         </button>
@@ -59,14 +61,14 @@
     
   
     <!-- HEADER TEXT SECTION -->
-    <div class=" w-full py-[80px] flex flex-col gap-4 md:gap-[10px]">
-      <h1 class="text-[35px] md:text-[60px] font-bold leading-tight">Welcome to Green Hive</h1>
-      <p class="text-[20px] md:text-[25px] font-semibold">Where Sustainability Meets Community</p>
-      <p class="w-full md:w-[60%] mt-4 md:mt-[30px] text-[14px] md:text-[16px] font-semibold leading-relaxed">
+    <div class="header-sect-container">
+      <h1 class="header-sect-container-h1">Welcome to Green Hive</h1>
+      <p class="header-sect-container-p1">Where Sustainability Meets Community</p>
+      <p class="header-sect-container-p2">
         Resources, education, and inspiration help communities adopt sustainable lifestyles, making eco-friendly practices more accessible. With a focus on sustainability, community, and action, the goal is to create lasting change, ensuring a greener future for both the planet and future generations through collective effort and meaningful initiatives.
       </p>
       <a href="about.html">
-        <button class="text-[15px] transition-all ease-in-out duration-500 hover:bg-yellow-600 mt-[20px] cursor-pointer text-white font-semibold px-[25px] py-[10px] bg-transparent border border-white rounded-[20px] w-max">
+        <button class="header-sect-container-btn">
           DISCOVER MORE
         </button>
       </a>
@@ -75,114 +77,107 @@
   
     
         <!-- the code below is the sub headline -->
-        <div class="w-[100%] flex-col lg:flex-row bg-gray-100 py-[60px] flex justify-center items-center gap-[30px]">
-            <div class="lg:w-[30%] w-[90%] gap-[10px] flex flex-col justify-center items-center">
-                <div class="w-[100%] shadow-md rounded-[30px] bg-slate-300 overflow-hidden h-[400px]">
-                    <img class="w-full h-full object-cover" src="./images/eco.png" alt="">
-                </div>
-                <p class="w-[70%] text-center md:text-[25px] text-[20px] lg:text-[20px] font-bold text-black">Eco-Friendly Solutions for Everyday Living</p>
+        <div class="home_sect1">
+            <div class="home_sect1_div">
+                <div class="home_sect1_div_container">
+                    <img src="./images/eco.png" alt="">
+                </div> 
+                <p>Eco-Friendly Solutions for Everyday Living</p>
             </div>
-            <div class="lg:w-[30%] w-[90%] gap-[10px] flex flex-col justify-center items-center">
-                <div class="w-[100%] shadow-md rounded-[30px] bg-slate-300 h-[400px] overflow-hidden">
-                    <img class="w-full h-full object-cover" src="./images//empowering.jpg" alt="">
+            <div class="home_sect1_div">
+                <div class="home_sect1_div_container">
+                    <img src="./images//empowering.jpg" alt="">
                 </div>
-                <p class="w-[70%] text-center md:text-[25px] text-[20px] lg:text-[20px] font-bold text-black">Empowering Sustainable Communities</p>
+                <p >Empowering Sustainable Communities</p>
             </div>
-            <div class="lg:w-[30%] w-[90%]  gap-[10px] flex flex-col justify-center items-center">
-                <div class="w-[100%] shadow-md rounded-[30px] overflow-hidden bg-slate-300 h-[400px]">
-                    <img class="w-full h-full object-cover" src="./images/community.jpg" alt="">
+            <div class="home_sect1_div">
+                <div class="home_sect1_div_container">
+                    <img src="./images/community.jpg" alt="">
                 </div>
-                <p class="w-[70%] text-center md:text-[25px] text-[20px] lg:text-[20px] font-bold text-black">Together, We Can Make a Difference</p>
+                <p>Together, We Can Make a Difference</p>
             </div>
         </div>
 
         <!-- this section shows just brief about the company -->
-         <div class="bggreen gap-[10px] py-[50px] text-center w-[100%] flex flex-col justify-center items-center">
-            <h1 class="font-bold text-white text-[30px] md:text-[50px]">Sustainability Hub</h1>
-            <p class="text-[20px] md:text-[30px] text-center font-semibold text-white">Your Guide to Green Living</p>
-            <p class="text-center text-white w-[90%] md:w-[70%] font-semibold text-[14px]">The Sustainability Hub offers practical green living tips, DIY eco-projects, and community events. Learn to reduce waste, save energy, and upcycle at home. Explore our interactive map for local sustainability workshops. Join the movement, take action, and create a greener future—one small step at a time! </p>
-            <a href="resources.html"><button class="text-[20px] transition-all ease-in-out duration-500 hover:bg-green-600 hover:text-white cursor-pointer mt-[50px] font-semibold bg-white text-black px-[50px] py-[20px] md:px-[130px] rounded-full">View Resources</button></a>
+         <div class="bggreen">
+            <h1>Sustainability Hub</h1>
+            <p class="bggreen_p1">Your Guide to Green Living</p>
+            <p class="bggreen_p2">The Sustainability Hub offers practical green living tips, DIY eco-projects, and community events. Learn to reduce waste, save energy, and upcycle at home. Explore our interactive map for local sustainability workshops. Join the movement, take action, and create a greener future—one small step at a time! </p>
+            <a href="resources.html"><button>View Resources</button></a>
          </div>
 
          <!-- this section below is the code for Main Body Paragraph: -->
-          <div class="w-[100%] flex flex-col gap-[20px] py-[50px] px-[30px]">
-                <div class="flex flex-col-reverse md:flex-row gap-[20px] md:justify-between items-center">
-                    <div class="md:w-[50%] w-[100%] flex flex-col gap-[30px]">
-                        <h1 class="w-[95%] text-[40px] font-bold">Practical Tips for Everyday Sustainability</h1>
-                        <p class="text-[20px] w-[100%]">The Sustainability Hub offers practical advice for incorporating 
+          <div class="home_sect3">
+                <div class="home_sect3_div1">
+                    <div class="home_sect3_div_content">
+                        <h1>Practical Tips for Everyday Sustainability</h1>
+                        <p>The Sustainability Hub offers practical advice for incorporating 
                             eco-friendly habits into your daily life. From reducing plastic use to energy
                             saving tips, we cover everything you need to live sustainably.</p>
                     </div>
-                    <div class="bg-gray-700 overflow-hidden rounded-[30px] w-[100%] md:w-[40%] md:h-[500px] h-[300px]">
-                        <img class="w-full  h-full object-cover" src="./images/ecofriendly.jpg" alt="">
+                    <div class="home_sect3_div_content_img">
+                        <img src="./images/ecofriendly.jpg" alt="">
                     </div>
                 </div>
 
-                <div class="flex flex-col md:flex-row gap-[20px] md:justify-between items-center">
-                    <div class="bg-gray-700 overflow-hidden rounded-[30px] w-[100%] md:w-[40%] md:h-[500px] h-[300px]">
-                        <img class="w-full  h-full object-cover" src="./images/paragraph2.jpg" alt="">
+                <div class="home_sect3_div2">
+                    <div class="home_sect3_div_content_img">
+                        <img src="./images/paragraph2.jpg" alt="">
                     </div>
-                    <div class="md:w-[50%] w-[100%] flex flex-col gap-[30px]">
-                        <h1 class="w-[95%] text-[40px] font-bold">DIY Projects for a Greener Home</h1>
-                        <p class="text-[20px] w-[100%]">Explore our DIY projects designed to help you make a positive 
+                    <div class="home_sect3_div_content">
+                        <h1>DIY Projects for a Greener Home</h1>
+                        <p>Explore our DIY projects designed to help you make a positive 
                             impact from the comfort of your home. Whether it’s upcycling old items or 
                             starting your own garden, we make sustainability easy and fun.</p>
                     </div>
                 </div>
 
-                <div class="flex flex-col-reverse md:flex-row gap-[20px] md:justify-between items-center">
-                    <div class="md:w-[50%] w-[100%] flex flex-col gap-[30px]">
-                        <h1 class="w-[95%] text-[40px] font-bold">Engage with Your Community for Lasting Impact</h1>
-                        <p class="text-[20px] w-[100%]">  Stay connected through our community events and workshops. 
+                <div class="home_sect3_div1">
+                    <div class="home_sect3_div_content">
+                        <h1>Engage with Your Community for Lasting Impact</h1>
+                        <p>  Stay connected through our community events and workshops. 
                             Learn new skills, meet like-minded individuals, and take action toward building a 
                             sustainable future—one step at a time</p>
                     </div>
-                    <div class="bg-gray-700 overflow-hidden rounded-[30px] w-[100%] md:w-[40%] md:h-[500px] h-[300px]">
-                        <img class="w-full h-full object-cover" src="./images/paragraph3.jpg" alt="">
+                    <div class="home_sect3_div_content_img">
+                        <img src="./images/paragraph3.jpg" alt="">
                     </div>
                 </div>
           </div>
 
 
           <!-- the code beloe is the footer menu -->
-          <footer class='w-[100%] bg-black '>
-            <div class='flex gap-[50px] lg:gap-0 flex-col lg:flex-row px-[20px] w-[90%] lg:w-[100%] lg:justify-between lg:items-center py-[90px] lg:px-[40px]'>
-                <div class='lg:w-[30%] w-[100%] flex flex-col gap-4'>
-                    <h1 class=' text-[30px] font-bold text-green-600'>GREEN HIVE</h1>
-                    <p class='text-gray-300 text-[14px]'>Providing resources, education, and inspiration empowers communities to embrace sustainable lifestyles. By focusing on sustainability, community, and action, we aim to drive lasting change, making eco-friendly practices accessible and impactful. Through collective effort and meaningful initiatives, we work toward a greener future for our planet and future generations.</p>
-                </div>
-                <div class='lg:w-[30%] w-[100%] flex flex-col gap-4 justify-start items-start'>
-                    
-                    <a href='home.html'>
-                        <p class='text-gray-300 cursor-pointer font-semibold transition-all ease-in-out duration-500 hover:text-yellow-600'>Home</p>
-                    </a>
-                    <a href='about.html'>
-                    <p class='text-gray-300 cursor-pointer font-semibold transition-all ease-in-out duration-500 hover:text-yellow-600'>About Us</p>
-                    </a>
-                    <a href='resources.html'>
-                    <p class='text-gray-300 font-semibold transition-all ease-in-out duration-500 hover:text-yellow-600'>References</p>
-                    </a>
-                   
-                   
-                </div>
-                <div class='lg:w-[30%] w-[100%] flex flex-col gap-4 justify-start items-start'>
-                    <div class='flex gap-2 justify-center items-center'>
-                        <div class='w-1 h-[15px] bg-yellow-500'></div>
-                        <p class='text-[18px] text-white font-bold'>SIGN UP FOR EMAIL UPDATE</p>
-                    </div>
-                    <div class='flex w-[100%]'>
-                        <input type="email" placeholder='Your Email Address' class='px-[20px] rounded-[10px] h-[39px] w-[100%] md:w-[50%] lg:w-[100%]' />
-                        <button class='rounded-[10px] right-[20px] md:right-[400px] lg:right-1 lg:w-[10%] px-2 absolute h-[40px] text-white  bg-yellow-500'>Subscirbe</button>
-                    </div>
-                    <p class='text-gray-300 font-semibold'>Sign up with your email address to receive news and updates</p>
-                    
-                </div>
-            </div>
-            <div class='w-full h-[1px] bg-green-500'></div>
-            <div class='w-[100%] gap-[30px] lg:gap-0 flex flex-col-reverse lg:flex-row justify-between py-[30px] items-center px-5'>
-                <p class='text-[15px] text-gray-300'>©2025 GREEN HIVE. All rights reserved.</p>
-            </div>
-        </footer>
+          
+        <footer class="footer">
+          <div class="footer-container">
+              <div class="footer-section">
+                  <h1 class="footer-title">GREEN HIVE</h1>
+                  <p class="footer-text">
+                      Providing resources, education, and inspiration empowers communities to embrace sustainable lifestyles. By focusing on sustainability, community, and action, we aim to drive lasting change, making eco-friendly practices accessible and impactful. Through collective effort and meaningful initiatives, we work toward a greener future for our planet and future generations.
+                  </p>
+              </div>
+              <div class="footer-links">
+                  <a href="home.html" class="footer-link">Home</a>
+                  <a href="about.html" class="footer-link">About Us</a>
+                  <a href="resources.html" class="footer-link">References</a>
+              </div>
+              <div class="footer-subscribe">
+                  <div class="subscribe-header">
+                      <div class="subscribe-line"></div>
+                      <p class="subscribe-text">SIGN UP FOR EMAIL UPDATES</p>
+                  </div>
+                  <div class="subscribe-form">
+                      <input type="email" placeholder="Your Email Address" class="subscribe-input">
+                      <button class="subscribe-button">Subscribe</button>
+                  </div>
+                  <p class="footer-text">Sign up with your email address to receive news and updates</p>
+              </div>
+          </div>
+          <div class="footer-divider"></div>
+          <div class="footer-bottom">
+              <p class="footer-copyright">©2025 GREEN HIVE. All rights reserved.</p>
+          </div>
+      </footer>
     </div>
     
 </body>

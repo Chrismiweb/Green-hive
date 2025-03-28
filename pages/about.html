@@ -4,44 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
     <div class="w-[100%] flex flex-col ">
-        <div class="headerbg flex flex-col   w-full">
+        <div class="headerbg-about">
             <!-- Navigation bar -->
-            <nav class="w-full py-5 px-6 md:px-[90px] flex bg-black  justify-between items-center relative">
+            <nav class="navbar2">
               <!-- Logo --> 
               <div>
-                <p class="text-green-500 font-bold text-[22px] md:text-[25px]">Green Hive</p>
+                <p class="nav-logo">Green Hive</p>
               </div>
           
               <!-- Desktop Menu -->
-              <div class="hidden text-white md:flex gap-[40px] justify-center items-center">
+              <div class="desktop-pages">
                 <a href="home.html">
-                  <p class="text-[17px] font-semibold text-white transition-all ease-in-out duration-500 hover:text-yellow-600">Home</p>
+                  <p class="pages-text">Home</p>
                 </a>
                 <a href="resources.html">
-                  <p class="text-[17px] font-semibold transition-all ease-in-out duration-500 hover:text-yellow-600">Resources</p>
+                  <p class="pages-text">Resources</p>
                 </a>
               </div>
           
               <!-- About Button (always visible on md+, otherwise included in mobile menu) -->
-              <div class="hidden md:block">
-                <a href="about.html">
-                  <button class="text-[15px] transition-all ease-in-out duration-500 hover:text-white hover:bg-yellow-600 cursor-pointer text-black font-semibold px-[25px] py-[10px] bg-yellow-500 rounded-[20px]">
-                    ABOUT US
-                  </button>
-                </a>
+              <div class="nav-btn-container">
+                  <a href="about.html">
+                    <button class="nav-btn">
+                      ABOUT US
+                    </button>
+                  </a>
               </div>
           
               <!-- Hamburger Icon for Mobile -->
-              <div class="md:hidden">
+              <div class="nav-icon-mobile">
                 <button id="menu-toggle" class="focus:outline-none">
                   <!-- Hamburger icon -->
-                  <svg class="w-6 h-6 fill-current text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
                   </svg>
                 </button>
@@ -62,108 +63,100 @@
             </div>
 
         <!-- this section is the about us header code  -->
-        <div  class="w-[100%]">
-            <div  class="relative w-full h-[400px] overflow-hidden">
-                    <!-- <Image src={aboutus} alt=""  class="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2"/> */} -->
-                <video autoPlay loop muted playsInline  class="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2">
-                <source src="/pages/images/aboutus.mp4" type="video/mp4" />
+        <div class="about-container">
+            <div class="video-section">
+                <video autoplay loop muted playsinline class="background-video">
+                    <source src="/pages/images/aboutus.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
-                <div  class="absolute inset-0 bg-black opacity-70 z-0"></div>
-                <div  class="relative z-10 gap-4 flex flex-col items-center justify-center h-full text-white">
-                    <h1  class="md:text-[70px] text-[35px] text-center text-white mt-[40px] font-bold">About Green Hive</h1>
-                    <p  class="md:w-[70%] w-[90%] text-center text-white  text-[18px]">Get to know Green Hive – a community-driven movement dedicated to sustainability, education, and action. Join us in making eco-friendly living accessible, inspiring change, and building a greener future together!</p>
-                    <!-- <a href="">
-                    <button  class="bg-yellow-500 rounded-full cursor-pointer  transition-all ease-in-out duration-500 text-white font-semibold hover:bg-yellow-600  py-[15px] px-[30px]">Contact Us</button>
-                    </a> -->
+                <div class="overlay"></div>
+                <div class="content">
+                    <h1 class="title">About Green Hive</h1>
+                    <p class="description">
+                        Get to know Green Hive – a community-driven movement dedicated to sustainability, education, and action.
+                        Join us in making eco-friendly living accessible, inspiring change, and building a greener future together!
+                    </p>
                 </div>
             </div>
         </div>
 
         <!-- who we are -->
-        <div class="flex w-[100%] gap-[20px] md:gap-0 flex-col md:flex-row py-[50px] px-[30px] justify-between items-center">
-            <div class="md:w-[50%] w-[100%] flex flex-col gap-[30px]">
-                <p class="font-semibold text-green-600">OUR STORY</p>
-                <h1 class="w-[95%] text-[40px] font-bold">From Idea to Impact</h1>
-                <p class="text-[20px] w-[100%]">Green Hive was founded with a simple belief: sustainable living 
+        <div class="story-container">
+            <div class="text-content">
+                <p class="tagline">OUR STORY</p>
+                <h1 class="heading">From Idea to Impact</h1>
+                <p class="description">
+                    Green Hive was founded with a simple belief: sustainable living 
                     should be accessible and achievable for everyone. What started as a small 
-                    initiative has grown into a thriving community of eco-conscious individuals</p>
+                    initiative has grown into a thriving community of eco-conscious individuals.
+                </p>
             </div>
-            <div class="bg-gray-700 overflow-hidden rounded-[30px] w-[100%] md:w-[40%] h-[400px]">
-                <img class="w-full  h-full object-cover" src="./images/story.jpg" alt="">
+            <div class="image-container">
+                <img src="./images/story.jpg" alt="Our Story">
             </div>
         </div>
 
         <!-- video -->
-        <div  class="relative w-full h-[250px] overflow-hidden">
-            <!-- <Image src={aboutus} alt=""  class="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2"/> */} -->
-            <video autoPlay loop muted playsInline  class="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2">
-            <source src="/pages/images/ceo.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
+        <div class="video-banner">
+            <video autoplay loop muted playsinline class="video-content">
+                <source src="/pages/images/ceo.mp4" type="video/mp4">
             </video>
-            <div  class="absolute inset-0 bg-black opacity-70 z-0"></div>
-            <div  class="relative z-10 gap-4 flex flex-col items-center justify-center h-full text-white">
-                <h1  class="md:text-[35px] w-[50%] md:w-[60%] text-[20px] text-center text-white mt-[40px] font-bold">Founders of Green Hive participating in a tree-planting event.</h1>
+            <div class="overlay"></div>
+            <div class="video-text">
+                <h1>Founders of Green Hive participating in a tree-planting event.</h1>
             </div>
         </div>
 
         <!-- our value and vision code  -->
-         <div class="w-[100%] py-[50px] flex flex-col md:flex-row px-[30px] justify-center gap-[30px] items-center">
-            <div class="w-[90%] md:w-[40%] rounded-[20px] p-[30px] inset-shadow-sm flex flex-col gap-[10px] bg-gray-200">
-                <i class="fa-regular fa-thumbs-up text-[40px] text-green-600"></i>
-                <h1 class="text-[35px] font-bold">Our Values</h1>
-                <p class="text-[17px] font-semibold">Sustainability, Community, Action</p>
-                <p class="text-[15px]">We’re committed to providing resources, education, and 
-                    inspiration to help communities adopt greener lifestyles. Our core values—
-                     sustainability, community, and action—guide everything we do.</p>
+        <div class="values-vision-section">
+            <div class="card">
+                <i class="fa-regular fa-thumbs-up icon"></i>
+                <h1>Our Values</h1>
+                <p class="subtitle">Sustainability, Community, Action</p>
+                <p>We’re committed to providing resources, education, and inspiration to help communities 
+                  adopt greener lifestyles. Our core values—sustainability, community, and action—guide everything we do.</p>
             </div>
-            <div class="w-[90%] md:w-[40%] rounded-[20px] md:py-[55px] lg:py-[40px] px-[30px] py-[30px] inset-shadow-sm flex flex-col gap-[10px] bg-gray-200">
-                <i class="fa-solid fa-eye text-[40px] text-green-600"></i>
-                <h1 class="text-[35px] font-bold">Our Vision</h1>
-                <p class="text-[17px] font-semibold">A Greener World for All</p>
-                <p class="text-[15px]"> Our vision is a future where sustainable practices are the norm. By 
-                    working together, we believe we can create meaningful change for our planet and 
-                    future generations</p>
+    
+            <div class="card">
+                <i class="fa-solid fa-eye icon"></i>
+                <h1>Our Vision</h1>
+                <p class="subtitle">A Greener World for All</p>
+                <p>Our vision is a future where sustainable practices are the norm. By working together, we believe 
+                  we can create meaningful change for our planet and future generations.</p>
             </div>
-         </div>
+        </div>
 
          <!-- the code beloe is the footer menu -->
-         <footer class='w-[100%] bg-black '>
-            <div class='flex gap-[50px] lg:gap-0 flex-col lg:flex-row px-[20px] w-[90%] lg:w-[100%] lg:justify-between lg:items-center py-[90px] lg:px-[40px]'>
-                <div class='lg:w-[30%] w-[100%] flex flex-col gap-4'>
-                    <h1 class=' text-[30px] font-bold text-green-600'>GREEN HIVE</h1>
-                    <p class='text-gray-300 text-[14px]'>Providing resources, education, and inspiration empowers communities to embrace sustainable lifestyles. By focusing on sustainability, community, and action, we aim to drive lasting change, making eco-friendly practices accessible and impactful. Through collective effort and meaningful initiatives, we work toward a greener future for our planet and future generations.</p>
-                </div>
-                <div class='lg:w-[30%] w-[100%] flex flex-col gap-4 justify-start items-start'>
-                    
-                    <a href='home.html'>
-                        <p class='text-gray-300 cursor-pointer font-semibold transition-all ease-in-out duration-500 hover:text-yellow-600'>Home</p>
-                    </a>
-                    <a href='about.html'>
-                    <p class='text-gray-300 cursor-pointer font-semibold transition-all ease-in-out duration-500 hover:text-yellow-600'>About Us</p>
-                    </a>
-                    <a href='resources.html'>
-                    <p class='text-gray-300 font-semibold transition-all ease-in-out duration-500 hover:text-yellow-600'>References</p>
-                    </a>
-                </div>
-                <div class='lg:w-[30%] w-[100%] flex flex-col gap-4 justify-start items-start'>
-                    <div class='flex gap-2 justify-center items-center'>
-                        <div class='w-1 h-[15px] bg-yellow-500'></div>
-                        <p class='text-[18px] text-white font-bold'>SIGN UP FOR EMAIL UPDATE</p>
-                    </div>
-                    <div class='flex w-[100%]'>
-                        <input type="email" placeholder='Your Email Address' class='px-[20px] rounded-[10px] h-[39px] w-[100%] md:w-[50%] lg:w-[100%]' />
-                        <button class='rounded-[10px] right-[20px] md:right-[400px] lg:right-1 lg:w-[10%] px-2 absolute h-[40px] text-white  bg-yellow-500'>Subscirbe</button>
-                    </div>
-                    <p class='text-gray-300 font-semibold'>Sign up with your email address to receive news and updates</p>
-                    
-                </div>
-            </div>
-            <div class='w-full h-[1px] bg-green-500'></div>
-            <div class='w-[100%] gap-[30px] lg:gap-0 flex flex-col-reverse lg:flex-row justify-between py-[30px] items-center px-5'>
-                <p class='text-[15px] text-gray-300'>©2025 GREEN HIVE. All rights reserved.</p>
-            </div>
-        </footer>
+         <footer class="footer">
+          <div class="footer-container">
+              <div class="footer-section">
+                  <h1 class="footer-title">GREEN HIVE</h1>
+                  <p class="footer-text">
+                      Providing resources, education, and inspiration empowers communities to embrace sustainable lifestyles. By focusing on sustainability, community, and action, we aim to drive lasting change, making eco-friendly practices accessible and impactful. Through collective effort and meaningful initiatives, we work toward a greener future for our planet and future generations.
+                  </p>
+              </div>
+              <div class="footer-links">
+                  <a href="home.html" class="footer-link">Home</a>
+                  <a href="about.html" class="footer-link">About Us</a>
+                  <a href="resources.html" class="footer-link">References</a>
+              </div>
+              <div class="footer-subscribe">
+                  <div class="subscribe-header">
+                      <div class="subscribe-line"></div>
+                      <p class="subscribe-text">SIGN UP FOR EMAIL UPDATES</p>
+                  </div>
+                  <div class="subscribe-form">
+                      <input type="email" placeholder="Your Email Address" class="subscribe-input">
+                      <button class="subscribe-button">Subscribe</button>
+                  </div>
+                  <p class="footer-text">Sign up with your email address to receive news and updates</p>
+              </div>
+          </div>
+          <div class="footer-divider"></div>
+          <div class="footer-bottom">
+              <p class="footer-copyright">©2025 GREEN HIVE. All rights reserved.</p>
+          </div>
+         </footer>
 
     </div>
 </body>

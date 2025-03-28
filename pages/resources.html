@@ -5,42 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="./output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="w-[100%] flex flex-col">
-        <div class="headerbg flex flex-col   w-full">
+        <div class="headerbg-about">
             <!-- Navigation bar -->
-            <nav class="w-full py-5 px-6 md:px-[90px] flex bg-black  justify-between items-center relative">
+            <nav class="navbar2">
               <!-- Logo -->
               <div>
-                <p class="text-green-500 font-bold text-[22px] md:text-[25px]">Green Hive</p>
+                <p class="nav-logo">Green Hive</p>
               </div>
           
               <!-- Desktop Menu -->
-              <div class="hidden text-white md:flex gap-[40px] justify-center items-center">
+              <div class="desktop-pages">
                 <a href="home.html">
-                  <p class="text-[17px] font-semibold transition-all ease-in-out duration-500 hover:text-yellow-600">Home</p>
+                  <p class="pages-text">Home</p>
                 </a>
                 <a href="resources.html">
-                  <p class="text-[17px] font-semibold transition-all ease-in-out duration-500 hover:text-yellow-600">Resources</p>
+                  <p class="pages-text">Resources</p>
                 </a>
               </div>
           
               <!-- About Button (always visible on md+, otherwise included in mobile menu) -->
-              <div class="hidden md:block">
-                <a href="about.html">
-                  <button class="text-[15px] transition-all ease-in-out duration-500 hover:text-white hover:bg-yellow-600 cursor-pointer text-black font-semibold px-[25px] py-[10px] bg-yellow-500 rounded-[20px]">
-                    ABOUT US
-                  </button>
-                </a>
+              <div class="nav-btn-container">
+                    <a href="about.html">
+                    <button class="nav-btn">
+                        ABOUT US
+                    </button>
+                    </a>
               </div>
           
               <!-- Hamburger Icon for Mobile -->
-              <div class="md:hidden">
+              <div class="nav-icon-mobile">
                 <button id="menu-toggle" class="focus:outline-none">
                   <!-- Hamburger icon -->
-                  <svg class="w-6 h-6 fill-current text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
                   </svg>
                 </button>
@@ -58,171 +59,178 @@
                     </button>
                   </a>
                 </div>
-              </div>
+            </div>
 
 
           <!-- this section is the about us header code  -->
-        <div  class="w-[100%]">
-            <div  class="relative w-full h-[400px] overflow-hidden">
-                    <!-- <Image src={aboutus} alt=""  class="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2"/> */} -->
-                <video autoPlay loop muted playsInline  class="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2">
-                <source src="/pages/images/nature.mp4" type="video/mp4" />
+          <div class="hero-container">
+            <div class="hero-video-wrapper">
+                <video autoplay loop muted playsinline class="hero-video">
+                    <source src="/pages/images/nature.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <div  class="absolute inset-0 bg-black opacity-70 z-0"></div>
-                <div  class="relative z-10 gap-4 flex flex-col items-center justify-center h-full text-white">
-                    <h1  class="md:text-[70px] text-[35px] text-center text-white mt-[40px] font-bold">Sustainability Hub</h1>
-                    <p  class="md:w-[70%] w-[90%] text-center text-white  text-[25px]">Your Guide to Green Living</p>
+                <div class="overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Sustainability Hub</h1>
+                    <p class="hero-subtitle">Your Guide to Green Living</p>
                     <a href="about.html">
-                    <button  class="bg-yellow-500 rounded-full cursor-pointer  transition-all ease-in-out duration-500 text-white font-semibold hover:bg-yellow-600  py-[15px] px-[30px]">About Us</button>
+                        <button class="hero-button">About Us</button>
                     </a>
                 </div>
             </div>
         </div>
 
-        <!-- headline one code -->
-        <div class="flex flex-col md:flex-row justify-center md:justify-around items-center gap-[30px] md:gap-0">
-            <div class="md:w-[50%] w-[90%] justify-center items-center gap-[30px] flex ">
-                <div class="bg-gray-700 overflow-hidden rounded-[30px] md:w-[40%] w-[50%] h-[400px]">
-                    <img class="w-full  h-full object-cover" src="./images/nature.jpg" alt="">
+        
+        <!-- Green Living Section -->
+        <div class="green-living-container">
+            <div class="green-living-images">
+                <div class="image-box">
+                    <img src="./images/nature.jpg" alt="Nature">
                 </div>
-                <div class="bg-gray-700 mt-[100px] overflow-hidden rounded-[30px] md:w-[40%] w-[50%] h-[400px]">
-                    <img class="w-full  h-full object-cover" src="./images/ecofriendly.jpg" alt="">
+                <div class="image-box image-offset">
+                    <img src="./images/ecofriendly.jpg" alt="Eco-Friendly">
                 </div>
             </div>
-            <div class="md:w-[40%] w-[80%] flex flex-col gap-[30px]">
-                <h1 class="w-[95%] text-[40px] text-center md:text-start font-bold">Green Living Tips for Everyday Life</h1>
-                <p class="text-[20px] text-center md:text-start w-[100%]">The Sustainability Hub offers practical advice for incorporating 
+            <div class="green-living-text">
+                <h1>Green Living Tips for Everyday Life</h1>
+                <p>
+                    The Sustainability Hub offers practical advice for incorporating 
                     eco-friendly habits into your daily life. From reducing plastic use to energy
-                    saving tips, we cover everything you need to live sustainably.</p>
+                    saving tips, we cover everything you need to live sustainably.
+                </p>
             </div>
         </div>
 
-         <!-- video -->
-         <div class="w-[100%] flex flex-col py-[100px] justify-center items-center">
-            <div  class=" md:w-[80%] w-[90%] bg-amber-600 lg:w-[50%] h-[350px] overflow-hidden">
-                <!-- <Image src={aboutus} alt=""  class="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2"/> */} -->
-                <!-- <video autoPlay loop muted playsInline  class="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2"> -->
-                <img src="./images/map.png" class="w-full  h-full" alt="">
+        <!-- Map Section -->
+        <div class="map-section">
+            <div class="map-container">
+                <img src="./images/map.png" alt="Map">
             </div>
-            <p class="md:text-[25px] text-[20px] font-bold text-center w-[70%]"> Interactive map highlighting upcoming sustainability workshops and events</p>
-         </div>
+            <p class="map-text">
+                Interactive map highlighting upcoming sustainability workshops and events
+            </p>
+        </div>
 
           <!-- this section below is the code for Main Body Paragraph: -->
-        <div class="w-[100%] flex flex-col gap-[20px] py-[50px] px-[30px]">
-            <div class="flex flex-col md:flex-row gap-[20px] md:justify-between items-center">
-                <div class="md:w-[50%] w-[100%] flex flex-col gap-[30px]">
-                    <h1 class="w-[95%] text-[40px] font-bold">DIY Sustainable Projects for Your Home</h1>
-                    <p class="text-[20px] w-[100%]">Explore our DIY projects designed to help you make a positive 
+        <div class="sustainable-container">
+            <!-- DIY Sustainable Projects Section -->
+            <div class="content-section">
+                <div class="text-content">
+                    <h1>DIY Sustainable Projects for Your Home</h1>
+                    <p>
+                        Explore our DIY projects designed to help you make a positive 
                         impact from the comfort of your home. Whether it’s upcycling old items or 
-                        starting your own garden, we make sustainability easy and fun.</p>
+                        starting your own garden, we make sustainability easy and fun.
+                    </p>
                 </div>
-                <div class="bg-gray-700 overflow-hidden rounded-[30px] w-[100%] md:w-[40%] h-[500px]">
-                    <img class="w-full  h-full object-cover" src="./images/diy.jpg" alt="">
+                <div class="image-box">
+                    <img src="./images/diy.jpg" alt="DIY Projects">
                 </div>
             </div>
-
-            <div class="flex flex-col-reverse md:flex-row gap-[20px] md:justify-between items-center">
-                <div class="bg-gray-700 overflow-hidden rounded-[30px] w-[100%] md:w-[40%] h-[500px]">
-                    <img class="w-full  h-full object-cover" src="./images/workshop.jpg" alt="">
+    
+            <!-- Community Events Section -->
+            <div class="content-section reverse">
+                <div class="image-box">
+                    <img src="./images/workshop.jpg" alt="Community Workshops">
                 </div>
-                <div class="md:w-[50%] w-[100%] flex flex-col gap-[30px]">
-                    <h1 class="w-[95%] text-[40px] font-bold">Community Events & Workshops Near You</h1>
-                    <p class="text-[20px] w-[100%]">Stay connected through our community events and workshops. 
+                <div class="text-content">
+                    <h1>Community Events & Workshops Near You</h1>
+                    <p>
+                        Stay connected through our community events and workshops. 
                         Learn new skills, meet like-minded individuals, and take action toward building a 
-                        sustainable future—one step at a time</p>
+                        sustainable future—one step at a time.
+                    </p>
                 </div>
             </div>
-      </div>
+        </div>
 
       <!--  Step-by-step photo guide for creating a home composting system. -->
         
-        <div class="w-[100%] flex flex-col py-[70px] gap-[30px] justify-center items-center  font-bold text-center ">
-            <p class="text-black text-center w-[80%] text-[25px] md:text-[30px] md:w-[50%]"> Step-by-Step guide for creating a home composting system</p>
-            <div class="w-[100%] gap-[20px] flex flex-col md:flex-row md:flex-wrap justify-center items-center">
-                <div class="md:w-[25%] w-[90%] lg:w-[15%] flex-col flex justify-center items-center text-[15px]   font-bold">
-                    <div class="bg-green-500 justify-center items-center flex text-white py-[20px] w-[100%] text-center">
-                        <p class="w-[60%]">Choose a Compost Bin</p>
+        <div class="compost-container">
+            <p class="compost-title">Step-by-Step guide for creating a home composting system</p>
+            
+            <div class="steps-container">
+                <!-- Step 1 -->
+                <div class="step-box">
+                    <div class="step-header">
+                        <p>Choose a Compost Bin</p>
                     </div>
-                    <div class="bg-black w-full overflow-hidden h-[250px]">
-                        <img class="w-full h-full object-cover"  src="/images/step1.jpg" alt="">
+                    <div class="step-image">
+                        <img src="./images/step1.jpg" alt="Choose a Compost Bin">
                     </div>
-                    <p></p>
                 </div>
-                <div class="md:w-[25%] w-[90%] lg:w-[15%] flex-col flex justify-center items-center text-[15px]   font-bold">
-                    <div class="bg-green-500 justify-center items-center flex text-white py-[20px] w-[100%] text-center">
-                        <p class="w-[80%]">Select Compostable Materials</p>
+
+                <!-- Step 2 -->
+                <div class="step-box">
+                    <div class="step-header">
+                        <p>Select Compostable Materials</p>
                     </div>
-                    <div class="bg-black w-full h-[250px]">
-                        <img class="w-full h-full object-cover"  src="/images/step2.jpg" alt="">
+                    <div class="step-image">
+                        <img src="./images/step2.jpg" alt="Select Compostable Materials">
                     </div>
-                    <p></p>
                 </div>
-                <div class="md:w-[25%] w-[90%] lg:w-[15%] flex-col flex justify-center items-center text-[15px]   font-bold">
-                    <div class="bg-green-500 justify-center items-center flex text-white py-[20px] w-[100%] text-center">
-                        <p class="w-[60%]">Layer Your Compost</p>
+
+                <!-- Step 3 -->
+                <div class="step-box">
+                    <div class="step-header">
+                        <p>Layer Your Compost</p>
                     </div>
-                    <div class="bg-black w-full overflow-hidden h-[250px]">
-                        <img src="/images/step3.jpg" alt="">
+                    <div class="step-image">
+                        <img src="./images/step3.jpg" alt="Layer Your Compost">
                     </div>
-                    <p></p>
                 </div>
-                <div class="md:w-[25%] w-[90%] lg:w-[15%] flex-col flex justify-center items-center text-[15px]   font-bold">
-                    <div class="bg-green-500 justify-center items-center flex text-white py-[20px] w-[100%] text-center">
-                        <p class="w-[60%]">Maintain & Turn the Pile</p>
+
+                <!-- Step 4 -->
+                <div class="step-box">
+                    <div class="step-header">
+                        <p>Maintain & Turn the Pile</p>
                     </div>
-                    <div class="bg-black w-full h-[250px]">
-                        <img class="w-full h-full object-cover"  src="/images/step4.jpg" alt="">
+                    <div class="step-image">
+                        <img src="./images/step4.jpg" alt="Maintain & Turn the Pile">
                     </div>
-                    <p></p>
                 </div>
-                <div class="md:w-[25%] w-[90%] lg:w-[15%] flex-col flex justify-center items-center text-[15px]   font-bold">
-                    <div class="bg-green-500 justify-center items-center flex text-white py-[20px] w-[100%] text-center">
-                        <p class="w-[60%]">Wait & Harvest the Compost</p>
+
+                <!-- Step 5 -->
+                <div class="step-box">
+                    <div class="step-header">
+                        <p>Wait & Harvest the Compost</p>
                     </div>
-                    <div class="bg-black w-full h-[250px]">
-                        <img class="w-full h-full object-cover"  src="/images/step5.jpg" alt="">
+                    <div class="step-image">
+                        <img src="./images/step5.jpg" alt="Wait & Harvest the Compost">
                     </div>
-                    <p></p>
                 </div>
             </div>
         </div>
-         
+
         <!-- footer menu -->
-        <footer class='w-[100%] bg-black '>
-            <div class='flex gap-[50px] lg:gap-0 flex-col lg:flex-row px-[20px] w-[90%] lg:w-[100%] lg:justify-between lg:items-center py-[90px] lg:px-[40px]'>
-                <div class='lg:w-[30%] w-[100%] flex flex-col gap-4'>
-                    <h1 class=' text-[30px] font-bold text-green-600'>GREEN HIVE</h1>
-                    <p class='text-gray-300 text-[14px]'>Providing resources, education, and inspiration empowers communities to embrace sustainable lifestyles. By focusing on sustainability, community, and action, we aim to drive lasting change, making eco-friendly practices accessible and impactful. Through collective effort and meaningful initiatives, we work toward a greener future for our planet and future generations.</p>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h1 class="footer-title">GREEN HIVE</h1>
+                    <p class="footer-text">
+                        Providing resources, education, and inspiration empowers communities to embrace sustainable lifestyles. By focusing on sustainability, community, and action, we aim to drive lasting change, making eco-friendly practices accessible and impactful. Through collective effort and meaningful initiatives, we work toward a greener future for our planet and future generations.
+                    </p>
                 </div>
-                <div class='lg:w-[30%] w-[100%] flex flex-col gap-4 justify-start items-start'>
-                    
-                    <a href='home.html'>
-                        <p class='text-gray-300 cursor-pointer font-semibold transition-all ease-in-out duration-500 hover:text-yellow-600'>Home</p>
-                    </a>
-                    <a href='about.html'>
-                    <p class='text-gray-300 cursor-pointer font-semibold transition-all ease-in-out duration-500 hover:text-yellow-600'>About Us</p>
-                    </a>
-                    <a href='resources.html'>
-                    <p class='text-gray-300 font-semibold transition-all ease-in-out duration-500 hover:text-yellow-600'>References</p>
-                    </a>
+                <div class="footer-links">
+                    <a href="home.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="resources.html" class="footer-link">References</a>
                 </div>
-                <div class='lg:w-[30%] w-[100%] flex flex-col gap-4 justify-start items-start'>
-                    <div class='flex gap-2 justify-center items-center'>
-                        <div class='w-1 h-[15px] bg-yellow-500'></div>
-                        <p class='text-[18px] text-white font-bold'>SIGN UP FOR EMAIL UPDATE</p>
+                <div class="footer-subscribe">
+                    <div class="subscribe-header">
+                        <div class="subscribe-line"></div>
+                        <p class="subscribe-text">SIGN UP FOR EMAIL UPDATES</p>
                     </div>
-                    <div class='flex w-[100%]'>
-                        <input type="email" placeholder='Your Email Address' class='px-[20px] rounded-[10px] h-[39px] w-[100%] md:w-[50%] lg:w-[100%]' />
-                        <button class='rounded-[10px] right-[20px] md:right-[400px] lg:right-1 lg:w-[10%] px-2 absolute h-[40px] text-white  bg-yellow-500'>Subscirbe</button>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Your Email Address" class="subscribe-input">
+                        <button class="subscribe-button">Subscribe</button>
                     </div>
-                    <p class='text-gray-300 font-semibold'>Sign up with your email address to receive news and updates</p>
-                    
+                    <p class="footer-text">Sign up with your email address to receive news and updates</p>
                 </div>
             </div>
-            <div class='w-full h-[1px] bg-green-500'></div>
-            <div class='w-[100%] gap-[30px] lg:gap-0 flex flex-col-reverse lg:flex-row justify-between py-[30px] items-center px-5'>
-                <p class='text-[15px] text-gray-300'>©2025 GREEN HIVE. All rights reserved.</p>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">©2025 GREEN HIVE. All rights reserved.</p>
             </div>
         </footer>
         
